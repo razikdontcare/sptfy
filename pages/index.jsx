@@ -81,7 +81,7 @@ export default function Home() {
       <div className="hero min-h-screen bg-base-200">
         <div className="hero-content">
           <div className="max-w-md">
-            <div className="text-center lg:text-left">
+            <div className="text-center">
               <h1 className="text-5xl font-bold">sptfy.tech</h1>
               <p className="py-6">Free Spotify URL Shortener just for you.</p>
             </div>
