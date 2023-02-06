@@ -13,6 +13,10 @@ export default function Home() {
   const [showUrl, setShowUrl] = useState(false);
   const [showError, setShowError] = useState(false);
 
+  const isDisabled =
+    longUrl == "" ? true : longUrl.includes("spotify.com") ? false : true;
+  const isSpotify = longUrl.includes("spotify.com");
+
   class RandomID {
     constructor() {
       this.id = "";
@@ -103,6 +107,13 @@ export default function Home() {
                 </div>
               </div>
             )}
+            {!isSpotify && longUrl != "" && (
+              <div className="alert alert-error shadow-lg">
+                <div>
+                  <span>{"Your URL doesn't seem to be a Spotify Link."}</span>
+                </div>
+              </div>
+            )}
             {showUrl && (
               <div className="alert alert-success shadow-lg">
                 <div>
@@ -145,7 +156,7 @@ export default function Home() {
                 </div>
                 <div className="form-control mt-6">
                   <button
-                    disabled={longUrl == ""}
+                    disabled={isDisabled}
                     onClick={shorten}
                     className="btn btn-primary"
                   >
