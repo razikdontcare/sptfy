@@ -77,9 +77,29 @@ export default function Home() {
     <>
       <Head>
         <title>Spotify Link Shortener - sptfy.tech</title>
-        <meta name="description" content="Spotify URL Shortener!" />
+        <meta name="description" content="Free " />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<meta name="title" content="Spotify Link Shortener - sptfy.tech">
+	<meta name="description" content="sptfy.tech is the ultimate solution for all your Spotify URL shortening needs. ">
+
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://sptfy.tech/">
+	<meta property="og:title" content="Spotify Link Shortener - sptfy.tech">
+	<meta property="og:description" content="sptfy.tech is the ultimate solution for all your Spotify URL shortening needs. ">
+	<meta property="og:image" content="/logo.png">
+
+	<meta property="twitter:card" content="summary_large_image">
+	<meta property="twitter:url" content="https://sptfy.tech/">
+	<meta property="twitter:title" content="Spotify Link Shortener - sptfy.tech">
+	<meta property="twitter:description" content="sptfy.tech is the ultimate solution for all your Spotify URL shortening needs. ">
+	<meta property="twitter:image" content="/logo.png">
+
         <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        <link rel="icon" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="manifest" href="/site.webmanifest" />
       </Head>
 
       <div className="hero min-h-screen bg-base-200">
