@@ -65,48 +65,6 @@ export default function Home() {
     }
   };
 
-  const shorten = async () => {
-    setShowError(false);
-    const result = new RandomID().id;
-
-    if (username == "") {
-      setUrlId(result);
-      await setDoc(doc(db, "short", result), {
-        longurl: longUrl,
-        shorturl: "/" + result,
-        id: result,
-        click: 0,
-      })
-        .then(() => {
-          setShowUrl(true);
-        })
-        .catch((error) => {
-          console.error(error);
-          setShowUrl(false);
-        });
-    } else {
-      const querySnapshot = await getDoc(doc(db, "short", username));
-      if (querySnapshot.exists()) {
-        setShowError(true);
-      } else {
-        setUrlId(username);
-        await setDoc(doc(db, "short", username), {
-          longurl: longUrl,
-          shorturl: "/" + username,
-          id: username,
-          click: 0,
-        })
-          .then(() => {
-            setShowUrl(true);
-          })
-          .catch((error) => {
-            console.error(error);
-            setShowUrl(false);
-          });
-      }
-    }
-  };
-
   return (
     <>
       <Head>
